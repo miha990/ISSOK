@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
     $id = intval($_POST['id']);
     $db = connectDatabase();
 
-    // Delete student by ID
+    // Delete product by ID
     $stmt = $db->prepare("DELETE FROM products WHERE id = :id");
     $stmt->bindValue(':id', $id, SQLITE3_INTEGER);
     $stmt->execute();

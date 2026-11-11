@@ -5,7 +5,7 @@ if (isset($_GET['id'])) {
     $id = intval($_GET['id']);
     $db = connectDatabase();
 
-    // Fetch the current details of the student
+    // Fetch the current details of the product
     $stmt = $db->prepare("SELECT * FROM products WHERE id = :id");
     $stmt->bindValue(':id', $id, SQLITE3_INTEGER);
     $result = $stmt->execute();

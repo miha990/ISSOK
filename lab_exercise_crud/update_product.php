@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
     $supplier = $_POST['supplier'] ?? '';
     $db = connectDatabase();
 
-    // Update student details
+    // Update product details
     $stmt = $db->prepare("UPDATE products SET name = :name,
              category = :category,
              quantity = :quantity,
