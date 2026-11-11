@@ -32,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Connect to the SQLite database
     $db = connectDatabase();
 
+
     // Prepare and execute the insert statement
     $stmt = $db->prepare("INSERT INTO products (name, category , quantity ,price , supplier) VALUES (:name, :category, :quantity, :price, :supplier)");
     $stmt->bindValue(':name', $name, SQLITE3_TEXT);

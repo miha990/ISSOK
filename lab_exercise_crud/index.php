@@ -66,7 +66,6 @@ if (!$result) {
                     echo htmlspecialchars($product['quantity']);
                     } ?>
                 </td>
-                <td>
                 <td><?php echo htmlspecialchars($product['price']); ?></td>
                 <td><?php echo htmlspecialchars($product['supplier']); ?></td>
 
